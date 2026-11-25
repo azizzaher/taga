@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from './api';
 import PlanPicker from './components/PlanPicker';
+import ProfilePage from './components/ProfilePage';
 
 const ACTIVITY = [
   ['sedentary', 'Mostly sitting'],
@@ -261,7 +262,13 @@ export default function App() {
           {page === 'dashboard' && <Dashboard session={session} />}
           {page === 'calculator' && <Calculator />}
           {page === 'tracker' && <Placeholder eyebrow="Food Tracker" title="Food Tracker" text="Log meals and see your daily totals." />}
-          {page === 'profile' && <Placeholder eyebrow="Profile" title="Your profile" text="Update your weight, height and activity level." />}
+          {page === 'profile' && (
+            <ProfilePage
+              profile={session.profile}
+              email={session.user.email}
+              onSaved={(profile) => setSession({ ...session, profile })}
+            />
+          )}
           {page === 'activity' && <Placeholder eyebrow="Activity" title="Walking & Running" text="Log walks and runs with distance and calories." />}
         </main>
       </div>
