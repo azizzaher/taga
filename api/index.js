@@ -6,6 +6,7 @@ import sessionRoute from './routes/session.js';
 import adminRoute from './routes/admin.js';
 import plansRoute from './routes/plans.js';
 import profileRoute from './routes/profile.js';
+import activityRoute from './routes/activity.js';
 
 const app = express();
 app.disable('x-powered-by');
@@ -21,6 +22,7 @@ app.use('/api/auth', sessionRoute);
 app.use('/api/admin', adminRoute);
 app.use('/api/plans', plansRoute);
 app.use('/api/profile', profileRoute);
+app.use('/api/activity', activityRoute);
 
 app.use('/api', (req, res) => {
   res.status(404).json({ error: `No route for ${req.method} ${req.originalUrl}.` });

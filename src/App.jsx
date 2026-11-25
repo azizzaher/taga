@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { api } from './api';
 import PlanPicker from './components/PlanPicker';
 import ProfilePage from './components/ProfilePage';
+import ActivityPage from './components/ActivityPage';
 
 const ACTIVITY = [
   ['sedentary', 'Mostly sitting'],
@@ -269,7 +270,7 @@ export default function App() {
               onSaved={(profile) => setSession({ ...session, profile })}
             />
           )}
-          {page === 'activity' && <Placeholder eyebrow="Activity" title="Walking & Running" text="Log walks and runs with distance and calories." />}
+          {page === 'activity' && <ActivityPage />}
         </main>
       </div>
       <aside className="sidebar">
