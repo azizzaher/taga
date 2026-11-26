@@ -76,3 +76,7 @@ button{cursor:pointer}
 .table tr:last-child td{border:0}
 .tag{display:inline-flex;padding:5px 7px;border-radius:7px;background:#123326;color:#5fe1ae;font-size:10px;font-weight:750;text-transform:capitalize}
 .tag.run{background:#1a2a48;color:#8cbcff}
+
+.btn.small{padding:7px 10px;font-size:11px}
+.btn.danger{color:#ff9aa8;border-color:#5b2a35}
+.date-input{background:#080e18;border:1px solid #26364d;color:#f4f7ff;border-radius:10px;padding:10px 12px;color-scheme:dark}

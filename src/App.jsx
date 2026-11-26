@@ -3,6 +3,7 @@ import { api } from './api';
 import PlanPicker from './components/PlanPicker';
 import ProfilePage from './components/ProfilePage';
 import ActivityPage from './components/ActivityPage';
+import FoodPage from './components/FoodPage';
 
 const ACTIVITY = [
   ['sedentary', 'Mostly sitting'],
@@ -262,7 +263,7 @@ export default function App() {
         <main>
           {page === 'dashboard' && <Dashboard session={session} />}
           {page === 'calculator' && <Calculator />}
-          {page === 'tracker' && <Placeholder eyebrow="Food Tracker" title="Food Tracker" text="Log meals and see your daily totals." />}
+          {page === 'tracker' && <FoodPage />}
           {page === 'profile' && (
             <ProfilePage
               profile={session.profile}
